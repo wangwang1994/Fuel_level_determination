@@ -42,3 +42,5 @@ urea_index = urea_point.index.to_frame()  # 找到加油点的index，也就是�
 urea_index_diff = urea_index - urea_index.shift(1)  # 加油点index的差分，用来寻找端点index
 # 如果差分大于半天的秒数，那么就认为发生了加油行为，
 urea_cycle = urea_index_diff[urea_index_diff[0] > 13200][0].index.to_list()  # 用这个list来保留周期的信息，list中就是周期端点
+
+# new_branch在这里显示
